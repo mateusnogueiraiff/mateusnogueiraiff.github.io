@@ -1,4 +1,4 @@
-# Bachelarelado em Sistemas de Informação - Instituto Federal Fluminense
+# Bacharelado em Sistemas de Informação - Instituto Federal Fluminense
 
 Aqui estão todos os trabalhos desenvolvidos nas disciplinas relacionadas a programação, até o momento (2025.1), na graduação em Sistemas de Informação (SI) no Instituto Federal Fluminense (IFF).
 
