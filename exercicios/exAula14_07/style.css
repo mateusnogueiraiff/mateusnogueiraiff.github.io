@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --cor1: #354550;
+    --cor2: #2387CF;
+    --cor3: #F7F9F7;
+
+    --fonteHFM: 'Share Tech Mono';
+    --fonteTexto: 'JetBrains Mono';
+}
+
+body {
+    background-color: var(--cor3);
+}
+
+header {
+    background-color: var(--cor1);
+    color: var(--cor3);
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: var(--fonteHFM);
+}
+
+footer {
+    background-color: var(--cor1);
+    color: var(--cor3);
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: var(--fonteHFM);
+
+    a {
+    color: var(--cor3);
+    text-decoration: none;
+    }
+    a:hover {
+        color: var(--cor2);
+        text-decoration: none;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 15% 2px 1fr; /*menu 15%, linha 2px, conteudo oq sobrar*/
+    gap: 10px;
+    align-items: start; /*elementos filhos de main se alinham pelo topo*/
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin-left: 10px;
+
+    background-color: white;
+    font-family: var(--fonteHFM);
+
+    a {
+        padding: 5px;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+        border-left: 4px solid transparent;
+        transition: 0.3s;
+    }
+    a:hover {
+        border-left: 4px solid var(--cor1);
+        background-color: #0092fa1c;
+    }
+}
+
+#linha-vertical {
+    background-color: var(--cor1);
+    width: 2px;
+    height: 100%;
+}
+
+#conteudo {
+    font-family: var(--fonteTexto);
+    font-size: 0.8em;
+    padding: 10px;
+
+    h2 {
+        color: var(--cor2);
+    }
+
+    h2, p {
+        padding-bottom: 15px;
+        text-align: justify;
+    }
+}
