@@ -7,7 +7,7 @@ Aqui estão todos os trabalhos desenvolvidos nas disciplinas relacionadas a prog
 2. [Projeto Orientado a Objetos](#projeto-orientado-a-objetos)
 3. [Técnicas de Programação](#t%C3%A9cnicas-de-programa%C3%A7%C3%A3o)
 4. [Programação Orientada a Objetos](#programa%C3%A7%C3%A3o-orientada-a-objetos)
-5. [Linguagem de Programação](linguagem-de-programa%C3%A7%C3%A3o)
+5. [Linguagem de Programação](#linguagem-de-programa%C3%A7%C3%A3o)
 
 
 ## Desenvolvimento Web
@@ -15,7 +15,11 @@ Aqui estão todos os trabalhos desenvolvidos nas disciplinas relacionadas a prog
 
 *Repositórios*
 
-[Exercícios](https://github.com/mateusnogueiraiff/mateusnogueiraiff.github.io/tree/main/exercicios)
+[Exercícios:](https://github.com/mateusnogueiraiff/mateusnogueiraiff.github.io/tree/main/exercicios)
+1. [Home](https://mateusnogueiraiff.github.io/exercicios/exAula07_07/curso/home.html)
+2. [Buscador do Google](https://mateusnogueiraiff.github.io/exercicios/exAula14_07/buscadorGoogle.html)
+3. [Página do Curso](https://mateusnogueiraiff.github.io/exercicios/exAula14_07/paginaCurso.html)
+4. [Calculadora Simples](https://mateusnogueiraiff.github.io/exercicios/exAula21_07/calc.html)
 
 [Plataforma de Voluntariado](https://github.com/mateusnogueiraiff/connect-volunteers-ngos)
 
@@ -45,4 +49,4 @@ Aqui estão todos os trabalhos desenvolvidos nas disciplinas relacionadas a prog
 
 *Repositórios*
 
-[Jogo da Velha](https://link-da-documentação)
+[Jogo da Velha](https://github.com/mateuscnogueira/jogoDaVelha)
