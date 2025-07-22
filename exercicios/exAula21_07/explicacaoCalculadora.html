@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Simples</title>
+</head>
+<body>
+  <center>
+    <table>
+      <tbody>
+        <tr>
+          <td colspan="4" align="right" style="border: 1px solid black; padding: 5px;">
+            <span id="calc-output">0</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td><input type="button" value="1" id="button-1"></td>
+          <td><input type="button" value="2" id="button-2"></td>
+          <td><input type="button" value="3" id="button-3"></td>
+          <td><input type="button" value="C" id="button-C"></td>
+        </tr>
+
+        <tr>
+          <td><input type="button" value="4" id="button-4"></td>
+          <td><input type="button" value="5" id="button-5"></td>
+          <td><input type="button" value="6" id="button-6"></td>
+          <td><input type="button" value="+" id="button-+"></td>
+        </tr>
+
+        <tr>
+          <td><input type="button" value="7" id="button-7"></td>
+          <td><input type="button" value="8" id="button-8"></td>
+          <td><input type="button" value="9" id="button-9"></td>
+          <td><input type="button" value="-" id="button--"></td>
+        </tr>
+
+        <tr>
+          <td><input type="button" value="*" id="button-*"></td>
+          <td><input type="button" value="0" id="button-0"></td>
+          <td><input type="button" value="/" id="button-/"></td>
+          <td><input type="button" value="=" id="button-="></td>
+        </tr>
+      </tbody>
+    </table>
+  </center>
+
+  <script>
+    const visor = document.getElementById('calc-output'); //armazena a referência do visor
+    let expressao = ''; //será responsável por acumular os valores clicados
+
+    const botoes = ['1','2','3','4','5','6','7','8','9','0','+','-','/','=','C','*'];
+
+    function manipularClique() {
+      const valor = this.value; //pega o valor do botão clicado
+
+      if (valor === 'C') { //botao C faz com que a expressão seja resetada e o visor volte a apresentar 0
+        expressao = '';
+        visor.textContent = '0';
+      } else if (valor === '=') {
+        try {
+          const resultado = eval(expressao); //eval pega a expressao e faz o processamento do calculo
+          visor.textContent = resultado;
+          expressao = resultado.toString(); //atualiza a expressão para possibilitar novos calculos
+        } catch (e) { //expressoes erradas
+          visor.textContent = 'Erro';
+          expressao = '';
+        }
+      } else { //qlq outro botão ele só adiciona ao visor
+        expressao += valor;
+        visor.textContent = expressao;
+      }
+    }
+
+    // associa os botoes a função de clique
+    for (let i = 0; i < botoes.length; i++) {
+      const id = 'button-' + botoes[i];
+      const botao = document.getElementById(id);
+
+      if (botao) { //add no botão o script de click
+        botao.addEventListener('click', manipularClique);
+      }
+    }
+  </script>
+
+  <!--
+    Bloco de notas:
+
+        var não é mt recomendado para uso pois ignora blocos como if, for. A partir do ES6, os problemas causados pelo var foram resolvidos pelo uso de let e const:
+
+        const: usar para variáveis que não vão mudar, valor fixo.
+
+        let: usar para variáveis que mudam constantemente. Variáveis de controle é bom usar let
+  -->
+</body>
+</html>
